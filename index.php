@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ใบส่งของ/ใบเสร็จรับเงิน/ใบกำกับภาษี</title>
+    <title>ใบขอซื้อ</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@
     <!-- container -->
     <div class="container">
         <div class="header">
-            <p>ใบส่งของ/ใบเสร็จรับเงิน/ใบกำกับภาษี</p>
+            <p>ใบขอซื้อ</p>
         </div>
         <form action="pdf.php" method="post" id="product-form" target="_blank">
 
@@ -31,21 +31,14 @@
                     <div class="form1">
                      <table>
                         <tr>
-                            <td width="80px"><label for="customer_name">ชื่อลูกค้า</label></td>
-                            <td><input type="text" id="customer_name" name="customer_name" required></td>
+                            <td width="80px"><label for="reason_purchase">เหตุผลในการขอซื้อ</label></td>
+                            <td><input type="text" id="reason_purchase" name="reason_purchase" required></td>
                         </tr>
                         <tr>
-                            <td><label for="address">ที่อยู่</label></td>
-                            <td><input type="text" id="address" name="address" required></td>
+                            <td><label for="department">แผนก</label></td>
+                            <td><input type="text" id="department" name="department" required></td>
                         </tr>
-                        <tr>
-                            <td><label for="taxpayer_identification_number">เลขที่ประจำตัวผู้เสียภาษี</label></td>
-                            <td><input type="text" id="taxpayer_identification_number" name="taxpayer_identification_number" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="telephone_number">เบอร์โทรศัพท์</label></td>
-                            <td><input type="text" id="telephone_number" name="telephone_number" required></td>
-                        </tr>
+
                      </table>
 
                     </div>
@@ -63,8 +56,8 @@
 
                 <div class="col">
 
-                    <!-- form3 -->
-                    <div class="form3">
+                    <!-- form2 -->
+                    <div class="form2">
 
                         <table>
                             <tr>
@@ -76,22 +69,18 @@
                                 <td><input type="text" id="receipt_number" name="receipt_number" required></td>
                             </tr>
                             <tr>
-                                <td><label for="date">วันที่</label></td>
-                                <td><input type="date" class="" id="date" name="date"  onkeydown="return false" required></td>
-                                <span id="datePickerLbl" style="pointer-events: none;"></span>
+                                <td><label for="date">วันที่/เดือน/ปี</label></td>
+                                <td><input type="date" class="" id="date" name="date" required></td>
                             </tr>
                             <tr>
-                                <td><label for="order_number">เลขที่ใบสั่งซื้อ</label></td>
-                                <td><input type="text" id="order_number" name="order_number" required></td>
+                                <td><label for="agency">หน่วยงาน</label></td>
+                                <td><input type="text" id="agency" name="agency" required></td>
                             </tr>
                             <tr>
-                                <td><label for="quotation_number">เลขที่ใบเสนอราคา</label></td>
-                                <td><input type="text" id="quotation_number" name="quotation_number" required></td>
+                                <td><label for="delivery_date">วันที่ส่งมอบ</label></td>
+                                <td><input type="date" class="" id="delivery_date" name="delivery_date" required></td>
                             </tr>
-                            <tr>
-                                <td><label for="make_payment">ชำระเงิน</label></td>
-                                <td><input type="text" id="make_payment" name="make_payment" required></td>
-                            </tr>
+
                      </table>
 
                     </div>
@@ -99,41 +88,21 @@
                 </div>
                 <div class="col">
 
-                    <div class="form4">
+                    <div class="form3">
                         <table>
                             <tr>
-                                <td width="40px"><input type="checkbox" id="payment_cash" name="payment_cash" value="true"></td>
-                                <td><label for="payment_cash"> การชำระเงินผ่านเงินสด</label></td>
+                                <td><label for="purchasing_department">แผนกจัดซื้อ</label></td>
+                                <td><input type="text" id="purchasing_department" name="purchasing_department" required></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" id="payment_check" name="payment_check" value="true"></td>
-                                <td><label for="payment_check"> เช็ค</label></td>
+                                <td><label for="date_get_job">รับงานวันที่</label></td>
+                                <td><input type="date" class="" id="date_get_job" name="date_get_job" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="order_number">ผู้บันทึก</label></td>
+                                <td><input type="text" id="journalist" name="journalist" required></td>
                             </tr>
 
-                            <tr>
-                            
-                                <td colspan="2">
-                                    <table>
-                                        <tr>
-                                            <td width="115px"><label for="bank">ธนาคาร</label></td>
-                                            <td><input type="text" id="bank" name="bank"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="branch">สาขา</label></td>
-                                            <td><input type="text" id="branch" name="branch"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="check_number">เลขที่เช็ค</label></td>
-                                            <td><input type="text" id="check_number" name="check_number"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="check_date">ลงวันที่</label></td>
-                                            <td><input type="date" id="check_date" name="check_date"></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                
-                            </tr>
                         </table>
                     </div>
                 </div>
@@ -142,42 +111,29 @@
             <div class="table_products">
                 <table>
                     <tr>
-                        <th width="544px">รายการ</th>
-                        <th width="180px">หน่วย</th>
-                        <th width="180px">จำนวน</th>
-                        <th width="180px">หน่วยละ</th>
-                        <th width="180px">จำนวนเงิน</th>
+                        <th width="90px">รายการที่</th>
+                        <th width="90px">จำนวน</th>
+                        <th width="500px">ชื่อและรายละเอียดส่งที่ต้องการ</th>
+                        <th width="120px">ราคาต่อหน่วย <br>(ถ้าทราบ) </th>
+                        <th width="480px">หมายเหตุร้านที่เคยหรือต้องการสั่งซื้อ</th>
                     </tr>
                     <?php for ($i = 1; $i <= 10; $i++): ?>
                     <tr>
-                        <td><input type="text" name="product_name<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
-                        <td><input type="text" name="product_unit<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
-                        <td><input type="number" name="product_amount<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
-                        <td><input type="number" name="product_price<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
-                        <td><input type="number" name="product_total<?= $i ?>" readonly></td>
+                        <td>
+                            <div class="product_level" tabindex="-1">
+                                <input type="number" name="number<?=$i?>" <?= $i === 1 ? 'required' : '' ?> id="number<?=$i?>" value="<?=$i?>" tabindex="-1"  readonly>
+                            </div>
+                        </td>
+                        <td><input type="number" name="quantity<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
+                        <td><input type="text" name="name_and_detail<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
+                        <td><input type="number" name="price_per_unit<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>></td>
+                        <td><input type="text" name="note<?= $i ?>" ></td>
                     </tr>
                     <?php endfor; ?>
                 </table>
 
             </div>
 
-            <div class="summary">
-                <table>
-                    <tr>
-                        <td><label for="subtotal">ยอดเงินรวม</label ></td>
-                        <td><input type="number" id="subtotal" name="subtotal" readonly></td>
-                    </tr>
-                    <tr>
-                        <td><label for="vat">ภาษีมูลค่าเพิ่ม</label></td>
-                        <td><input type="number" id="vat" name="vat" readonly></td>
-                    </tr>
-                    <tr>
-                        <td><label for="grand_total">ราคารวมทั้งสิ้น</label></td>
-                        <td><input type="number" id="grand_total" name="grand_total"  readonly></td>
-                    </tr>
-                </table>
-
-            </div>
             <div class="button_form">
                 <button type="submit">
                     <!-- <i class="bi bi-printer"></i>  -->
@@ -207,89 +163,12 @@
 
         var today = new Date();
         document.getElementById("date").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
-        document.getElementById("check_date").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+        document.getElementById("delivery_date").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+        document.getElementById("date_get_job").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+
 
             
             // }
-        document.addEventListener("DOMContentLoaded", function() {
-                // document.querySelector(`input[name="date_check"]`).value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
-                const rows = 10;
-                const vatRate = 7;
-
-            function calculateRowTotal(row) {
-                // const amount = parseFloat(document.querySelector(`input[name="product_amount${row}"]`).value) || 0;
-                // const price = parseFloat(document.querySelector(`input[name="product_price${row}"]`).value) || 0;
-                // const total = amount * price;
-                // document.querySelector(`input[name="product_total${row}"]`).value = total.toFixed(2);
-
-                // return total;
-
-                const amount = parseFloat(document.querySelector(`input[name="product_amount${row}"]`).value || 0);
-                const price = parseFloat(document.querySelector(`input[name="product_price${row}"]`).value || 0);
-
-                let total = 0;
-
-                if((price == 0 && amount == 0)){
-
-                    document.querySelector(`input[name="product_total${row}"]`).value = "";
-                    return 0;
-
-                }else if(amount == 0){
-
-                    // document.querySelector(`input[name="product_total${row}"]`).value = price.toFixed(2);
-                    document.querySelector(`input[name="product_total${row}"]`).value = price;
-                    return price;
-
-                }else if(price == 0){
-                    document.querySelector(`input[name="product_total${row}"]`).value = "";
-                    return 0;
-                }else{
-
-                    total = amount * price;
-                    document.querySelector(`input[name="product_total${row}"]`).value = total.toFixed(2);
-
-                    return total;
-                }
-
-
-            }
-
-            function calculateAllTotals() {
-                let subtotal = 0;
-
-                for (let i = 1; i <= rows; i++) {
-
-                    subtotal += calculateRowTotal(i);
-                    // if(calculateRowTotal(i) != null){
-                        
-                    // }else{
-                    //     subtotal += 0;
-                    // }
-                }
-
-                console.log("subtotal >.>",subtotal)
-
-                // const discount = parseFloat(document.querySelector('input[name="discount"]').value) || 0;
-                // const discount = 0;
-                // const afterDiscount = subtotal - discount;
-
-                const vat = subtotal * (vatRate / 100);
-                const grandTotal = subtotal + vat;
-
-                // อัพเดตค่าฟิลด์ต่าง ๆ
-                document.querySelector('input[name="subtotal"]').value = subtotal.toFixed(2);
-                // document.querySelector('input[name="after_discount"]').value = afterDiscount.toFixed(2);
-                document.querySelector('input[name="vat"]').value = vat.toFixed(2);
-                document.querySelector('input[name="grand_total"]').value = grandTotal.toFixed(2);
-            }
-
-            // เพิ่ม event listeners สำหรับฟิลด์ที่เกี่ยวข้อง
-            document.querySelectorAll('input[type="number"]').forEach(input => {
-                input.addEventListener("input", calculateAllTotals);
-            });
-
-            calculateAllTotals();
-        });
 
         document.addEventListener("DOMContentLoaded", function() {
 
@@ -311,7 +190,13 @@
 
                 var today_ = new Date();
                 document.getElementById("date").value = (today_.getFullYear()+ 543) + '-' + ('0' + (today_.getMonth() + 1)).slice(-2) + '-' + ('0' + today_.getDate()).slice(-2);
-                document.getElementById("check_date").value = (today_.getFullYear()+ 543) + '-' + ('0' + (today_.getMonth() + 1)).slice(-2) + '-' + ('0' + today_.getDate()).slice(-2);
+                document.getElementById("delivery_date").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+                document.getElementById("date_get_job").value = (today.getFullYear()+ 543) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+
+                
+                for (let index = 1; index <= 10; index++) {
+                    document.getElementById(`number${index}`).value = index;
+                }
             }
             
             clearButton.addEventListener("click", clearForm);

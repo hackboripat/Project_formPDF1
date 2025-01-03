@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 1440px;
-  height: 1024px;
+  height: 780px;
   padding: 0;
   /* display: flex; */
   /* justify-content: center; */
@@ -49,12 +49,12 @@ body {
 /* } */
 
 .row{
-  height: 288px;  
+  height: 250px;  
 }
 
 .form1{
   width: 380px;
-  height: 180px;
+  height: 120px;
 
   margin: 0 auto;
 }
@@ -65,43 +65,24 @@ body {
 }
 
 .form2{
-  font-size: 12px;
-  color: #FFF;
-
-  /* margin-top: 20px; */
-  margin: 20px auto 0 auto;
   width: 380px;
-  height: 124px;
-  border-radius: 5px;
-  border: 2px dashed #E6E6E7;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 230px;
+
+  margin: 0 auto;
 }
 
-.form2 p{
-  font-size: 13px;
-  display: block;
-  margin: 0 0 10px 0;
-}
-
-.form2 textarea{
-  resize: none;
-}
-
-.form2 textarea{
-  width: 336px;
-  height: 42px;
-  border-radius: 3px;
-  border: 1px solid #515963;
+.form2 label{
+  width: 130px;
+  margin-left: 10px;
 }
 
 .form3{
-  width: 380px;
-  height: 250px;
 
-  margin: 0 auto;
+  width: 380px;
+  height: 160px;
+
+  margin-left: 20px;
+
 }
 
 .form3 label{
@@ -109,40 +90,14 @@ body {
   margin-left: 10px;
 }
 
-.form4{
-
-  width: 380px;
-  height: 215px;
-
-  margin-left: 20px;
-
-  /* height: 205px; */
-}
-
-/* .form4 label{
-  width: 180px;
-} */
-
-.form4 input[type=text]{
+.form3 input[type=text]{
   width: 200px;
   height: 21px;
   border-radius: 3px;
   border: 1px solid #515963;
 }
 
-.form4 td{
-  padding: 4px 0;
-}
-
-.form4 input[type="checkbox"]{
-  margin-left: 15px;
-}
-
-.form4 table td table td{
-  padding-left: 40px;
-}
-
-.form1, .form3, .form4{
+.form1, .form2, .form3{
   font-size: 12px;
   color: #FFF;
 
@@ -154,7 +109,7 @@ body {
   align-items: center;
 }
 
-.form1 input[type=text] , .form3 input[type=text]{
+.form1 input[type=text] , .form2 input[type=text] , .form3 input[type=text]{
   font-size: 12px;
   width: 200px;
   height: 21px;
@@ -163,18 +118,18 @@ body {
 
 }
 
-.form3 input[type=date] , .form4 input[type=date]{
+.form1 input[type=date] , .form2 input[type=date] , .form3 input[type=date]{
   font-size: 12px;
   height: 21px;
   border-radius: 3px;
   border: 1px solid #515963;
 }
 
-.form1 table,.form3 table ,.form4 table{
+.form1 table,.form2 table ,.form3 table{
   width: 100%;
 }
  
-.form1 td,.form3 td{
+.form1 td,.form2 td ,.form3 td{
   padding: 7px 0;
 }
 
@@ -216,6 +171,10 @@ body {
   padding: 0;
 }
 
+.table_products table th{
+  height: 50px;
+}
+
 .table_products input[type=text]{
   text-align: left;
 }
@@ -230,6 +189,31 @@ body {
   height: 100%;
   border: 0px;
   margin: 0;
+}
+
+
+
+.product_level{
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.product_level input[type=number]{
+  text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.product_level input::-webkit-outer-spin-button,
+.product_level input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.product_level input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
@@ -284,6 +268,7 @@ body {
   height: 37px;
   border: 0;
   border-radius: 5px;
+  margin-top: 50px;
 
   color: #FFF;
   background-color: #868CFF;
