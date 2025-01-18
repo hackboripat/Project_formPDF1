@@ -16,6 +16,8 @@
 
 <body>
 
+    <?php date_default_timezone_set('Asia/Bangkok');?>
+
     <!-- container -->
     <div class="container">
         <div class="header">
@@ -70,7 +72,7 @@
                             </tr>
                             <tr>
                                 <td><label for="date">วันที่/เดือน/ปี</label></td>
-                                <td><input type="date" class="" id="date" name="date" required></td>
+                                <td><input type="date" class="" id="date" name="date" value="<?php echo date((date("Y")+543).'-m-d')?>" required></td>
                             </tr>
                             <tr>
                                 <td><label for="agency">หน่วยงาน</label></td>
@@ -78,7 +80,7 @@
                             </tr>
                             <tr>
                                 <td><label for="delivery_date">วันที่ส่งมอบ</label></td>
-                                <td><input type="date" class="" id="delivery_date" name="delivery_date" required></td>
+                                <td><input type="date" class="" id="delivery_date" name="delivery_date" value="<?php echo date((date("Y")+543).'-m-d')?>" required></td>
                             </tr>
 
                      </table>
@@ -96,7 +98,7 @@
                             </tr>
                             <tr>
                                 <td><label for="date_get_job">รับงานวันที่</label></td>
-                                <td><input type="date" class="" id="date_get_job" name="date_get_job" required></td>
+                                <td><input type="date" class="" id="date_get_job" name="date_get_job" value="<?php echo date((date("Y")+543).'-m-d')?>" required></td>
                             </tr>
                             <tr>
                                 <td><label for="order_number">ผู้บันทึก</label></td>

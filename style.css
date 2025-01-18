@@ -165,14 +165,16 @@ body {
 
 }
 
-.table_products table th, .table_products table td {
+.table_products table th{
   border: 1px solid #B9B9B9;
-  height: 18px;
+  height: 50px;
   padding: 0;
 }
 
-.table_products table th{
-  height: 50px;
+.table_products table td {
+  border: 1px solid #B9B9B9;
+  height: 27px;
+  padding: 0;
 }
 
 .table_products input[type=text]{
